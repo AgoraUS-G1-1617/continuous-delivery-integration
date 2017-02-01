@@ -77,6 +77,7 @@ docker run -d --name $ENV_NAME-$BRANCH-php \
 	-e VIRTUAL_PORT=80 \
 	-e "LETSENCRYPT_HOST=$URL_VIRTUAL_HOST" \
 	-e "LETSENCRYPT_EMAIL=annonymous@alum.us.es" \
+	-c "a2enmod rewrite" \
 	webdevops/php-nginx:debian-8
 
 
