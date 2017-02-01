@@ -61,7 +61,7 @@ docker run --name $ENV_NAME-$BRANCH-mysql \
 echo "$ENV_NAME-mysql creado !"
 # echo "$ENV_NAME-mysql creado ($MYSQL_ROOT_PASSWORD)!"
 
-sleep 20
+sleep 30
 
 docker exec $ENV_NAME-$BRANCH-mysql \
     bash -c "exec mysql -uroot -p"$MYSQL_ROOT_PASSWORD" < /home/user/populate.sql"
